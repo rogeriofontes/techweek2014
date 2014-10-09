@@ -1,71 +1,633 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Techweek2014 by rogeriofontes</title>
+<html lang="en">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Techweek2014</h1>
-        <p></p>
+	<head>
+		<meta charset="utf-8">
 
-        <p class="view"><a href="https://github.com/rogeriofontes/techweek2014">View the Project on GitHub <small>rogeriofontes/techweek2014</small></a></p>
+		<title>Produtividade no Java?</title>
 
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
 
-        <ul>
-          <li><a href="https://github.com/rogeriofontes/techweek2014/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/rogeriofontes/techweek2014/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/rogeriofontes/techweek2014">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+	<body>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+		<div class="reveal">
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+				<section>
+					<h1>Produtividade no Java</h1>
+					<h3>Java não é produtivo? Java é Lento? Java Morreu?</h3>
+					<p>
+						<small>Rogério Fontes <a href="http://about.me/rogeriofontes">http://about.me/rogeriofontes</a> / <a href="http://twitter.com/rogeriofontes">@rogeriofontes</a></small>
+					</p>
+				</section>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+				<section>
+					<h2>Sobre o palestrante</h2>
+					<p>
+						<ul>
+							<li>Fundador e JugLeader do UaiJUG</li>
+							<li>Co-Fundador do Triângulo Hackerspace</li>
+							<li>Professor universitário (Redes e JAVA)</li>
+							<li>Desenvolvedor de código e analista de infra-estrutura a 12 anos</li>
+						</ul>
+						<br />
+						<a href="http://www.uaijug.com.br" class="image">
+							<img width="238" height="238" src="img/uaijug-logo.png" alt="Down arrow">
+						</a>
+						<a href="http://www.triangulohackerspace.net.br" class="image">
+							<img width="238" height="238" src="img/ths-logo.png" alt="Down arrow">
+						</a>
+					</p>
+				</section>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+				<section>
+					<h2>Sobre o palestrante</h2>
+					<p>
+						Apaixonado por cógido e maneiras ágeis de criá-los. Viciado em leitura nerd geral, games, desenvolvimento, eletrônica, música e mulher (é claro).
+						<br />Evangelista do programador poliglota de entregas rápidas e contínuas ao cliente. Sempre errando (sempre) e aprendendo nos caminhos de empreendedorismo de carreira e statup.
+					</p>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section>
+					<h2>O que é o programador poliglota?</h2>
+					<p>
+						Skill: (java|c,c++|php|python|scala|js)$
+					</p>
+				</section>
+				<section>
+					<h2>JAVA, como está?</h2>
+					<img src="img/java-roadmap.png" />
+				</section>
+				
+				<section>
+					<h2>Java é lento? Java é verboso?</h2>
+					<p>
+						<p>
+						Despois da inserção do JIT (Just-in-time compilation) na HotSpot, java melhorou significamente sua performasse. Java 8 melhorou significamente a verbosidade (tenho que admitir, pode melhorar muito)
+						</P>
+						<p>
+						<a href="http://www.infoq.com/br/articles/9_Fallacies_Java_Performance" target="_blank">Artigo: 9 falácias sobre o desempenho do Java.</a>
+						</P>
+						<p>
+						<a href="http://www.techempower.com/blog/2013/04/05/frameworks-round-2/" target="_blank">Teste de performace.</a>
+						</p>
+					</p>
+				</section>
+			
+				<section>
+					<h2>Outras Linguagens são melhores que java?</h2>
+					<p>
+						Ha! python é melhor, PHP é melhor, Lisp é melhor!!!! Cada um tem seu melhor e seu pior, cada um tem seu propósito. Pra que brigar, seja diverso e use o melhor de cada, porra!
+					</p>
+				</section>
+				
+				
+				
+				<section>
+					<h2>Minha última Arquitetura.</h2>
+					<section>
+					<ul>
+						<li>Aplicação Backend (rest-api)
+							<ul>
+								<li>JPA 2.0 (para o mysql)</li>
+								<li>Scala-AKKA (para conexao com o mongodb)</li>
+								<li>EJB 3.2</li>
+								<li>CDI 1.0</li>
+								<li>RestEasy 3.0</li>
+							</ul>
+						</li>
+					</ul>
+					</section>
+					<section>
+					<ul>
+						<li>Aplicação Front-end
+							<ul>
+								<li>AngularJS</li>
+							</ul>
+						</li>
+					</ul>
+					</section>
+					<section>
+					<ul>
+						<li>Integração continua - CI
+							<ul>
+								<li>Jenkins</li>
+								<li>Maven</li>
+								<li>Ant</li>
+								<li>Shellscript</li>
+							</ul>
+						</li>	
+					</ul>
+					</section>
+					<section>
+					<ul>
+						<li>Gerenciamento de servidores e deploy
+							<ul>
+								<li>Scripts python para controle do Jboss WildFly</li>
+							</ul>
+						</li>
+					</ul>
+					</section>
+				</section>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/rogeriofontes">rogeriofontes</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+				<section>
+					<h2>Vantagens do java?</h2>
+					<ul>
+						<li>Comunidade sempre atuante.</li>
+						<li>JCP</li>
+						<li>API</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Convite a Comunidade</h2>
+					<p>
+						<ul>
+							<li><a href="http://www.uaijug.com.br/#!/" target="_blank">http://www.uaijug.com.br/#!/</a></li>
+							<li><a href="http://soujava.org.br/" target="_blank">http://soujava.org.br/</a></li>
+							<li><a href="http://www.dfjug.com.br/" target="_blank">http://www.dfjug.com.br/</a></li>
+							<li><a href="http://gojava.org/" target="_blank">http://gojava.org/</a></li>
+							<li><a href="http://www.javace.org/" target="_blank">http://www.javace.org/</a></li>
+							<li><a href="http://www.rsjug.org/" target="_blank">http://www.rsjug.org/</a></li>
+						</ul>
+					</p>
+				</section>
+				
+				<section>
+					<h2>Posso ter produtividade no Java?</h2>
+					<section>
+					<ol>
+						<li>Spring boot</li>
+						<li>Jboss Forge</li>
+						<li>Play Framework</li>
+						<li>VRaptor</li>
+					</ol>
+					</section>
+					<section>
+						<h2>Spring boot</h2>
+						<p>
+							Spring boot ajuda equipes de desenvolvimento de todos os lugares a construir uma aplicação simples, portátil, rápida e flexível baseada em JVM.
+						</p>
+						<p><a href="http://spring.io/">http://spring.io/</a></p>
+					</section>
+					<section>
+						<h2>Jboss Forge</h2>
+						<p>
+							JBoss Forge é a maneira mais rápida de construir projetos Maven baseado em Java EE.
+						</p>
+						<p><a href="http://forge.jboss.org/">http://forge.jboss.org/</a></p>
+					</section>
+					<section>
+						<h2>Play Framework</h2>
+						<p>
+							Alta velocidade de construção de Frameworks Web para Java e Scala.
+						</p>
+						<p><a href="https://www.playframework.com/">https://www.playframework.com/</a></p>
+					</section>
+					<section>
+						<h2>VRaptor</h2>
+						<p>
+							O VRaptor 4 traz alta produtividade para um desenvolvimento Java Web rápido e fácil com CDI. É um framework MVC opensource com grande comunidade de desenvolvedores e usuários!
+						</p>
+						<p><a href="http://www.vraptor.org/pt/">http://www.vraptor.org/pt/</a></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Projeto Vraptor - Demo</h2>
+						<ol>
+							<li>Criar projeto maven - WAR</li>
+							<li>Adicionar dependências no pom.xml</li>
+							<li>Habilitar CDI - beans.xml</li>
+							<li>Configurar Listeners do Vraptor no web.xml</li>
+							<li>Criar paginas jsp's</li>
+							<li>Mapear Entidades</li>
+							<li>Criar Controladores</li>
+							<li>Criar DAO's</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Criar projeto maven - WAR</h2>
+						<img src="img/maven1.jpg" width="638" height="538" />
+					</section>
+					<section>
+						<h2>Criar projeto maven - WAR</h2>
+						<img src="img/maven2.jpg" width="638" height="538" />
+					</section>
+					<section>
+						<h2>Criar projeto maven - WAR</h2>
+						<img src="img/maven3.jpg" width="638" height="538" />
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Adicionar dependências no pom.xml
+								<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+									<modelVersion>4.0.0</modelVersion>
+									<groupId>br.com.uaijug.techweek</groupId>
+									<artifactId>VRaptorDemo</artifactId>
+									<version>0.0.1-SNAPSHOT</version>
+									<packaging>war</packaging>
+									<dependencies>
+										<dependency>
+											<groupId>br.com.caelum</groupId>
+											<artifactId>vraptor</artifactId>
+											<version>4.1.1</version> <!--or the latest version -->
+										</dependency>
+										<dependency>
+											<groupId>javax.inject</groupId>
+											<artifactId>javax.inject</artifactId>
+											<version>1</version>
+											<!-- uncomment this line on app servers -->
+											<!-- <scope>provided</scope> -->
+										</dependency>
+
+										<dependency>
+											<groupId>javax.servlet</groupId>
+											<artifactId>javax.servlet-api</artifactId>
+											<version>3.1.0</version>
+											<scope>provided</scope>
+										</dependency>
+
+										<dependency>
+											<groupId>br.com.caelum.vraptor</groupId>
+											<artifactId>vraptor-jpa</artifactId>
+											<version>4.0.0.Final</version>
+										</dependency>
+
+										<dependency>
+											<groupId>org.hibernate</groupId>
+											<artifactId>hibernate-entitymanager</artifactId>
+											<version>4.3.0.Final</version>
+										</dependency>
+
+										<dependency>
+											<groupId>org.hsqldb</groupId>
+											<artifactId>hsqldb</artifactId>
+											<version>2.3.0</version>
+										</dependency>
+
+										<dependency>
+											<groupId>javax.servlet</groupId>
+											<artifactId>jstl</artifactId>
+											<version>1.2</version>
+										</dependency>
+									</dependencies>
+								</project>
+						</script>
+					</section>		
+					<section data-markdown>
+						<script type="text/template">
+							## Habilitar CDI - beans.xml 
+
+							Criar no caminho: resources / META-INF / beans.xml
+
+									<?xml version="1.0" encoding="UTF-8"?>
+									<beans 	xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+											xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+											xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+																http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd"
+											version="1.1" bean-discovery-mode="all">
+
+									</beans>
+						</script>
+					</section>	
+					<section data-markdown>
+						<script type="text/template">
+							## Configurar Listeners do Vraptor no web.xml
+
+							Criar no caminho: src / main / webapp / WEB-INF / web.xml
+
+								<?xml version="1.0" encoding="UTF-8"?>
+								<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+									xmlns:web="http://java.sun.com/xml/ns/javaee" 
+									xmlns="http://java.sun.com/xml/ns/javaee" 
+									xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+									http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+
+								  <display-name>vraptor-blank-project</display-name>
+								  
+								  <context-param>
+									<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+									<param-value>messages</param-value>
+								  </context-param>
+								  
+								  <listener>
+									<listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
+								  </listener>
+								  
+								</web-app>
+						</script>
+					</section>			
+					<section data-markdown>
+						<script type="text/template">
+							## Criar paginas jsp's
+
+							Criar no caminho: src / main / webapp / WEB-INF / jsp / person /form.jsp
+
+								<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+								<form action="<c:url value='/person/add'/>" method="post">
+									<input name="person.name" />
+									<input type="submit" />
+								</form>
+						</script>
+					</section>		
+					<section data-markdown>
+						<script type="text/template">
+							## Criar paginas jsp's
+
+							Criar no caminho: src / main / webapp / WEB-INF / jsp / person /list.jsp
+
+								<div id="message">
+									<h3>${message}</h3>
+								</div>
+						</script>
+					</section>	
+					<section data-markdown>
+						<script type="text/template">
+							## Criar conexão JPA
+
+							Criar no caminho: src / main / resources / META-INF / persistence.xml
+
+								<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+								<?xml version="1.0" encoding="UTF-8"?>
+								<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+									  http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+									version="2.0">
+
+									<persistence-unit name="default">
+
+										<class>br.uaijug.techweek.model.Person</class>
+
+										<properties>
+											<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
+											<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:testuaijug" />
+											<property name="javax.persistence.jdbc.user" value="sa" />
+											<property name="javax.persistence.jdbc.password" value="sa" />
+
+											<property name="hibernate.dialect"
+												value="org.hibernate.dialect.HSQLDialect" />
+											<property name="hibernate.show_sql" value="true" />
+											<property name="hibernate.format_sql" value="false" />
+											<property name="hibernate.hbm2ddl.auto" value="update" />
+										</properties>
+									</persistence-unit>
+
+								</persistence>
+						</script>
+					</section>	
+					<section data-markdown>
+						<script type="text/template">
+							## Mapear Entidade
+
+							Criar no caminho: src / main / java / br / uaijug / techweek / model / Person.java
+
+								package br.uaijug.techweek.model;
+
+								import javax.persistence.Entity;
+								import javax.persistence.GeneratedValue;
+								import javax.persistence.Id;
+
+								@Entity
+								public class Person {
+
+									@Id
+									@GeneratedValue
+									private Long id;
+
+									private String name;
+
+									public Long getId() {
+										return id;
+									}
+
+									public void setId(Long id) {
+										this.id = id;
+									}
+
+									public String getName() {
+										return name;
+									}
+
+									public void setName(String name) {
+										this.name = name;
+									}
+
+								}
+
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Criar Controlador
+
+							Criar no caminho: src / main / java / br / uaijug / techweek / controller / PersonController.java
+
+								<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+								package br.uaijug.techweek.controller;
+
+								import java.util.List;
+
+								import javax.inject.Inject;
+								import javax.validation.constraints.NotNull;
+
+								import br.com.caelum.vraptor.Controller;
+								import br.com.caelum.vraptor.Get;
+								import br.com.caelum.vraptor.Post;
+								import br.com.caelum.vraptor.Result;
+								import br.uaijug.techweek.model.Person;
+								import br.uaijug.techweek.model.dao.PersonDao;
+
+								@Controller
+								public class PersonController {
+
+									@Inject
+									private Result result;
+
+									@Inject
+									private PersonDao personDao;
+
+									public void form() {
+									}
+
+									@Get("/person/list")
+									public List<Person> list() {
+										return personDao.listAll();
+									}
+
+									@Post("/person/add")
+									public void add(final @NotNull Person person) {
+
+										personDao.add(person);
+
+										result.include("message", person.getName() + " person added");
+										result.redirectTo(PersonController.class).list();
+
+									}
+								}
+
+						</script>
+					</section>	
+					<section data-markdown>
+						<script type="text/template">
+							## Criar DAO - Interface
+
+							Criar no caminho: src / main / java / br / uaijug / techweek / model / dao / PersonDao.java
+
+								package br.uaijug.techweek.model.dao;
+
+								import java.util.List;
+
+								import br.uaijug.techweek.model.Person;
+
+								public interface PersonDao {
+									
+									void add(Person person);
+
+									Person load(Person person);
+
+									List<Person> listAll();
+
+								}
+
+						</script>
+					</section>						
+					<section data-markdown>
+						<script type="text/template">
+							## Criar DAO - Implementação
+
+							Criar no caminho: src / main / java / br / uaijug / techweek / model / dao / DefaultPersonDao.java
+
+								package br.uaijug.techweek.model.dao;
+
+								import java.util.List;
+
+								import javax.inject.Inject;
+								import javax.persistence.EntityManager;
+
+								import br.uaijug.techweek.model.Person;
+
+								public class DefaultPersonDao implements PersonDao {
+									
+									@Inject
+									private EntityManager entityManager;
+
+									public void add(Person person) {
+										entityManager.persist(person);		
+									}
+
+									public Person load(Person person) {
+										return (Person) entityManager.find(Person.class, person.getId());
+									}
+
+									public List<Person> listAll() {
+										return entityManager.createQuery("select m from Person m", Person.class).getResultList();
+									}
+
+								}
+
+						</script>
+					</section>		
+					<section>
+						<h2>Mais sobre Vaptor?</h2>
+						<p><a href="http://www.vraptor.org/en/docs/one-minute-guide/" target="_blank">http://www.vraptor.org/en/docs/one-minute-guide/</a></p>
+						<p><a href="http://www.vraptor.org/en/docs/ten-minute-guide/" target="_blank">http://www.vraptor.org/en/docs/ten-minute-guide/</a></p>
+						<a href="http://www.vraptor.org/pt/" target="_blank"><img src="img/vraptor4-site.jpg" alt="Meny"></a>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Quer aprofundar em java?</h2>
+						<p>Entre para uma comunidade..</p>
+						<p class="fragment">... estude ...</p>
+						<p class="fragment">... faça encontros para network ...</p>
+						<p class="fragment">... entre em comunidades ...</p>
+						<p class="fragment">... nunca fique na linguagem, entenda o ecosistema....</p>
+						<p class="fragment">... divirta-se sempre!</p>
+						
+					</section>
+				</section>
+
+				<section>
+					<img src="img/making-java.jpg" alt="Meny">
+					<p><a href="http://soujava.org.br/servicos/adopt-a-jsr/" target="_blank">http://soujava.org.br/servicos/adopt-a-jsr/</a></p>
+				</section>
+				
+				<section>
+					Next Steps - Comparativo dos applications boots: 
+					<ul>
+						<li>Spring boot</li>
+						<li>Jboss Forge</li>
+						<li>Play Framework</li>
+						<li>VRaptor</li>
+					</ul>
+					<p><h3>Tudo disponivel em:  </h3><a href="https://github.com/rogeriofontes" target="_blank">https://github.com/rogeriofontes</a></p>
+				</section>
+				
+				<section>
+					<h1>THE END</h1>
+					<h3>Rogério Fontes / @rogeriofontes</h3>
+					<h6>Palestra disponível em: <a href="https://github.com/rogeriofontes/techweek2014" target="_blank">https://github.com/rogeriofontes/techweek2014</a> </h6>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
 </html>

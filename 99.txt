@@ -1,0 +1,220 @@
+<dependencies>
+		<dependency>
+			<groupId>br.com.caelum</groupId>
+			<artifactId>vraptor</artifactId>
+			<version>4.1.1</version> <!--or the latest version -->
+		</dependency>
+		para o cdi
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+			<!-- uncomment this line on app servers -->
+			<!-- <scope>provided</scope> -->
+		</dependency>
+	</dependencies>
+	
+	
+	criar  resources / META-INF / beans.xml
+	
+	
+	<?xml version="1.0" encoding="UTF-8"?>
+<beans 	xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+							http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd"
+		version="1.1" bean-discovery-mode="all">
+
+</beans>
+
+
+CRiar controlador
+
+ controller / IndexController.java
+ 
+ import javax.inject.Inject;
+
+import br.com.caelum.vraptor.Controller;
+import br.com.caelum.vraptor.Path;
+import br.com.caelum.vraptor.Result;
+
+@Controller
+public class IndexController {
+
+	private final Result result;
+
+	/**
+	 * @deprecated CDI eyes only
+	 */
+	protected IndexController() {
+		this(null);
+	}
+	
+	@Inject
+	public IndexController(Result result) {
+		this.result = result;
+	}
+
+	@Path("/")
+	public void index() {
+		result.include("variable", "VRaptor!");
+	}
+}
+
+criar web.xml
+
+src / main / webapp / WEB-INF / web.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:web="http://java.sun.com/xml/ns/javaee" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+
+  <display-name>vraptor-blank-project</display-name>
+  
+  <context-param>
+    <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+    <param-value>messages</param-value>
+  </context-param>
+  
+  <listener>
+    <listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
+  </listener>
+  
+</web-app>
+
+criar pagina
+
+WEB-INF / jsp / index / index.jsp
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>VRaptor Blank Project</title>
+</head>
+<body>
+	It works!! ${variable} ${linkTo[IndexController].index}
+</body>
+</html>
+
+para nao dar erro no jsp de requere The superclass "javax.servlet.http.HttpServlet" was not found on the Java Build Path
+colocar no maven pom
+<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+<scope>provided</scope> para nao compilar junto com o projeto
+
+
+Acrescentando o banco com jpa no pom.xml
+
+<dependency>
+			<groupId>br.com.caelum.vraptor</groupId>
+			<artifactId>vraptor-jpa</artifactId>
+			<version>4.0.0.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.3.0.Final</version>
+		</dependency>
+
+<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+
+criar o arquivo resources / META-INF / persistence.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+      http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+	
+	<persistence-unit name="default">
+	
+		<class>br.com.caelum.vraptor.musicjungle.model.Music</class>
+		<class>br.com.caelum.vraptor.musicjungle.model.User</class>
+	
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:testuaijug" />
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			
+			<property name="hibernate.dialect" value="br.com.caelum.vraptor.dialect.TemporaryHSQLDBDialect"/>
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="false" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+		</properties>
+	</persistence-unit>
+	
+</persistence>
+
+
+CRiar entidado pessoa 
+
+package br.com.uaijug.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Person {
+
+	@Id
+	@GeneratedValue
+	private Long id;
+
+	private String name;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}
+
+criar dao 
+
+package br.com.uaijug.model.dao;
+
+import java.util.List;
+
+import br.com.uaijug.model.Person;
+
+public interface PersonDao {
+	
+	void add(Person person);
+
+	Person load(Person person);
+
+	List<Person> listAll();
+
+}
+
+criar controlador da pessoa
+
+http://www.slideshare.net/andreforchesatto/aula-introduo-a-vraptor-4-ps-java-utfpr
